@@ -7,7 +7,7 @@ import 'package:quizapp/theme.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(App());
+  runApp(const App());
 }
 
 /// We are using a StatefulWidget such that we only create the [Future] once,
