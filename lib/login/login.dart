@@ -25,7 +25,23 @@ class LoginScreen extends StatelessWidget {
                 text: 'Continue as guest',
                 loginMethod: AuthService().anonLogin,
               ),
-            )
+            ),
+            Flexible(
+              child: LoginButton(
+                color: Colors.blue,
+                icon: FontAwesomeIcons.google,
+                text: 'Sign in with Google',
+                loginMethod: AuthService().googleLogin,
+              ),
+            ),
+            Flexible(
+              child: LoginButton(
+                color: Colors.black,
+                icon: FontAwesomeIcons.apple,
+                text: 'Sign in with Apple',
+                loginMethod: AuthService().anonLogin,
+              ),
+            ),
           ],
         ),
       ),
