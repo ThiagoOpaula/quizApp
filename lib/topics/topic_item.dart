@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quizapp/services/models.dart';
+import 'package:quizapp/shared/progress_bar.dart';
 //import 'package:quizapp/shared/progress_bar.dart';
 
 class TopicItem extends StatelessWidget {
@@ -47,7 +48,8 @@ class TopicItem extends StatelessWidget {
                     softWrap: false,
                   ),
                 ),
-              )
+              ),
+              Flexible(child: TopicProgress(topic: topic)),
             ],
           ),
         ),

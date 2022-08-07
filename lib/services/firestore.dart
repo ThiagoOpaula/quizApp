@@ -28,7 +28,7 @@ class FirestoreService {
     return AuthService().userStream.switchMap((user) {
       if (user != null) {
         var ref = _db.collection('reports').doc(user.uid);
-        return ref.snapshots().map((doc) => Report.fromJson(doc.data()!));
+        return ref.snapshots().map((doc) => Report.fromJson(doc.data() ?? {}));
       } else {
         return Stream.fromIterable([Report()]);
       }
