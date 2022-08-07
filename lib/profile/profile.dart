@@ -34,7 +34,9 @@ class ProfileScreen extends StatelessWidget {
                           Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
                               .withOpacity(0.4),
                       child: Text(
-                        user.displayName!.substring(0, 1),
+                        user.displayName != ''
+                            ? user.displayName!.substring(0, 1)
+                            : '?',
                         style: const TextStyle(
                           color: Colors.white,
                           fontSize: 48,
